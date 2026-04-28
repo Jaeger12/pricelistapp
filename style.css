@@ -1132,6 +1132,10 @@ header p {
   margin-bottom: 10px;
 }
 
+.section-header {
+  text-align: center;
+}
+
 .section-subtext {
   color: #7a8b6a;
   font-size: 0.95rem;
@@ -1285,6 +1289,10 @@ header p {
 
 /* Mobile responsive for compare table */
 @media (max-width: 600px) {
+  .compare-section {
+    padding: 0 16px;
+  }
+
   .compare-table-wrap {
     border-radius: 18px;
     overflow-x: auto;
@@ -1322,6 +1330,11 @@ header p {
   .badge-save {
     font-size: 0.7rem;
     padding: 5px 10px;
+  }
+
+  .compare-table th.col-save,
+  .compare-table td.col-save {
+    display: none;
   }
 }
 
