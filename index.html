@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Store Pricelist</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Home View - App Selection -->
+    <div class="home-view" id="home-view">
+        <div class="background-animation"></div>
+        <div class="container">
+            <header>
+                <div class="header-badge">✨ PREMIUM STORE</div>
+                <h1>Premium Account <span>Store</span></h1>
+                <p>Pilih aplikasi untuk melihat pricelist</p>
+            </header>
+            <div class="apps-grid" id="apps-grid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail View - App Pricelist -->
+    <div class="detail-view" id="detail-view">
+        <div class="background-animation"></div>
+        <div class="container">
+            <button class="btn-back" id="back-btn">
+                <i class="fas fa-arrow-left"></i> Kembali
+            </button>
+            <div class="detail-header">
+                <div class="detail-branding">
+                    <div class="app-header-icon" id="app-header-icon"></div>
+                    <div class="detail-branding-text">
+                        <h1 id="app-title">Aplikasi</h1>
+                        <p id="app-subtitle">Pilih paket yang sesuai</p>
+                    </div>
+                </div>
+                <div class="detail-tags" id="detail-tags">
+                    <span class="tag">Terbaik</span>
+                    <span class="tag">Cepat</span>
+                    <span class="tag">Aman</span>
+                </div>
+            </div>
+            <div class="detail-content" id="detail-content">
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" title="Tutup">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <i class="fas fa-check-circle modal-success-icon"></i>
+                <h2>Konfirmasi Pesanan</h2>
+            </div>
+            <div class="modal-body">
+                <div class="order-item">
+                    <span class="order-label">Aplikasi</span>
+                    <span class="order-value" id="modal-app-name">Aplikasi</span>
+                </div>
+                <div class="order-item">
+                    <span class="order-label">Paket</span>
+                    <span class="order-value" id="modal-app-package">Paket</span>
+                </div>
+                <div class="order-item">
+                    <span class="order-label">Harga</span>
+                    <span class="order-value modal-price" id="modal-app-price">Rp 0</span>
+                </div>
+                <form class="order-form" id="order-form">
+                    <div class="form-group">
+                        <label for="user-name">Nama Lengkap <span class="required-mark">*</span></label>
+                        <input type="text" id="user-name" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-email">Email <span class="required-mark">*</span></label>
+                        <input type="email" id="user-email" placeholder="Masukkan email Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-phone">Nomor WhatsApp <span class="required-mark">*</span></label>
+                        <input type="tel" id="user-phone" placeholder="Masukkan nomor WhatsApp Anda" required>
+                    </div>
+                    <button type="submit" class="btn-order-modal">
+                        <i class="fas fa-credit-card"></i> Lanjutkan Pesanan
+                    </button>
+                </form>
+                <div class="thankyou-panel" id="thankyou-panel" aria-live="polite" hidden>
+                    <div class="thankyou-header">
+                        <i class="fas fa-heart-circle"></i>
+                        <h2>Terima Kasih!</h2>
+                    </div>
+                    <p class="thankyou-text">Pesananmu sudah tercatat. Silakan lihat detail di bawah dan lanjutkan ke WhatsApp jika sudah siap.</p>
+                    <div class="thankyou-summary">
+                        <div class="thankyou-item">
+                            <span class="thankyou-label">Aplikasi</span>
+                            <span class="thankyou-value" id="thanks-app-name">-</span>
+                        </div>
+                        <div class="thankyou-item">
+                            <span class="thankyou-label">Paket</span>
+                            <span class="thankyou-value" id="thanks-app-package">-</span>
+                        </div>
+                        <div class="thankyou-item">
+                            <span class="thankyou-label">Harga</span>
+                            <span class="thankyou-value thankyou-price" id="thanks-app-price">-</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-order-modal btn-whatsapp" id="whatsapp-send-button">
+                        <i class="fab fa-whatsapp"></i> Kirim ke WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
