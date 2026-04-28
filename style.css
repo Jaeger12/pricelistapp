@@ -843,10 +843,12 @@ header p {
 .modal-content {
   background: linear-gradient(135deg, rgba(243, 235, 216, 0.95), rgba(249, 208, 206, 0.95));
   border: 2px solid rgba(242, 151, 160, 0.3);
-  border-radius: 25px;
-  padding: 25px;
-  max-width: 400px;
-  width: 90%;
+  border-radius: 20px;
+  padding: 16px;
+  max-width: 380px;
+  width: 92%;
+  max-height: 92vh;
+  overflow-y: auto;
   position: relative;
   animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5),
@@ -881,13 +883,13 @@ header p {
 
 .modal-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .modal-success-icon {
-  font-size: 50px;
+  font-size: 36px;
   color: #B6BB79;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: block;
   animation: scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -904,7 +906,7 @@ header p {
 }
 
 .modal-header h2 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin: 0;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
@@ -913,18 +915,18 @@ header p {
 }
 
 .modal-body {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .order-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  margin-bottom: 15px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
   background: rgba(242, 151, 160, 0.1);
   border: 1px solid rgba(242, 151, 160, 0.2);
-  border-radius: 12px;
+  border-radius: 10px;
   transition: all 0.3s ease;
 }
 
@@ -947,32 +949,32 @@ header p {
 }
 
 .order-form {
-  padding: 20px 0;
+  padding: 12px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
 
 .form-group label {
   color: #7a8b6a;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   letter-spacing: 0.3px;
 }
 
 .form-group input {
-  padding: 12px 16px;
+  padding: 9px 12px;
   background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(242, 151, 160, 0.3);
-  border-radius: 10px;
+  border-radius: 8px;
   color: var(--text);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   transition: all 0.3s ease;
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
@@ -990,20 +992,20 @@ header p {
 
 .btn-order-modal {
   width: 100%;
-  padding: 14px;
+  padding: 11px;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: var(--text);
   border: none;
-  border-radius: 12px;
-  font-size: 1rem;
+  border-radius: 10px;
+  font-size: 0.92rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 8px;
+  margin-top: 8px;
   position: relative;
   overflow: hidden;
 }
@@ -1035,7 +1037,7 @@ header p {
 
 .thankyou-panel {
   display: none;
-  margin-top: 25px;
+  margin-top: 14px;
   text-align: center;
 }
 
@@ -1047,40 +1049,41 @@ header p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
 .thankyou-header .fas {
-  font-size: 52px;
+  font-size: 38px;
   color: #4ade80;
 }
 
 .thankyou-header h2 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
 }
 
 .thankyou-text {
   color: #7a8b6a;
-  margin-bottom: 20px;
-  line-height: 1.6;
+  margin-bottom: 14px;
+  line-height: 1.5;
+  font-size: 0.88rem;
 }
 
 .thankyou-summary {
   background: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(242, 151, 160, 0.2);
-  border-radius: 18px;
-  padding: 20px;
-  margin-bottom: 20px;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 14px;
 }
 
 .thankyou-item {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  padding: 12px 0;
+  padding: 8px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -1118,4 +1121,244 @@ header p {
 
 .required-mark {
   color: #ec4899;
+}
+
+/* ============================
+   MOBILE RESPONSIVE
+   ============================ */
+
+/* Tablet - max 768px */
+@media (max-width: 768px) {
+  body {
+    padding: 8px 16px;
+  }
+
+  /* Hero */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 12px 0 40px;
+    text-align: center;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+    margin-bottom: 14px;
+  }
+
+  .hero-copy p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    width: auto;
+    padding: 10px 22px;
+    font-size: 0.88rem;
+  }
+
+  /* Hero visual - sembunyikan di mobile kecil agar tidak buang ruang */
+  .hero-visual {
+    display: none;
+  }
+
+  /* Apps Grid */
+  .apps-section {
+    margin-top: 40px;
+  }
+
+  .section-header h2 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+
+  .apps-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .app-card {
+    padding: 16px 10px;
+    min-height: 120px;
+    border-radius: 18px;
+  }
+
+  .app-card-icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  .app-card-name {
+    font-size: 0.8rem;
+  }
+
+  /* Detail View */
+  .btn-back {
+    padding: 10px 16px;
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+  }
+
+  .detail-header {
+    margin-bottom: 28px;
+    gap: 16px;
+  }
+
+  .app-header-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    flex-shrink: 0;
+  }
+
+  .app-header-icon-img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .detail-header h1 {
+    font-size: 2rem;
+  }
+
+  .detail-header p {
+    font-size: 0.9rem;
+  }
+
+  .detail-content {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .price-card {
+    padding: 20px;
+    border-radius: 20px;
+    min-height: unset;
+  }
+
+  .price-card-title {
+    font-size: 1.05rem;
+  }
+
+  .price-value {
+    font-size: 1.3rem;
+  }
+
+  .tag {
+    padding: 7px 12px;
+    font-size: 0.78rem;
+  }
+}
+
+/* Mobile kecil - max 480px */
+@media (max-width: 480px) {
+  body {
+    padding: 6px 12px;
+  }
+
+  .apps-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .app-card {
+    padding: 12px 8px;
+    min-height: 105px;
+    border-radius: 16px;
+  }
+
+  .app-card-icon {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 16px;
+  }
+
+  .app-card-name {
+    font-size: 0.72rem;
+  }
+
+  .detail-branding {
+    gap: 14px;
+  }
+
+  .app-header-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .app-header-icon-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .detail-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .detail-header p {
+    font-size: 0.85rem;
+  }
+
+  .price-card {
+    padding: 16px;
+  }
+
+  .price-value {
+    font-size: 1.2rem;
+  }
+
+  /* Modal mobile */
+  .modal-overlay {
+    align-items: flex-end;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 18px 14px 24px;
+    max-height: 88vh;
+  }
+
+  .modal-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal-success-icon {
+    font-size: 30px;
+    margin-bottom: 6px;
+  }
+
+  .order-label,
+  .order-value {
+    font-size: 0.85rem;
+  }
+
+  .modal-price {
+    font-size: 1.1rem !important;
+  }
+
+  .form-group input {
+    font-size: 16px; /* cegah zoom otomatis iOS */
+  }
+
+  .thankyou-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .thankyou-header .fas {
+    font-size: 32px;
+  }
+
+  .section-header h2 {
+    font-size: 1.2rem;
+  }
 }
